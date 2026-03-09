@@ -11,3 +11,9 @@ let promedio = (nota1 + nota2 + nota3) / 3;
 // Mostrar promedio con 2 decimales
 console.log("El promedio es: " + promedio.toFixed(2));
 
+// Condicional para aprobar o reprobar
+if (promedio >= 3.0) {
+    console.log("El estudiante APRUEBA");
+} else {
+    console.log("El estudiante REPRUEBA");
+}
