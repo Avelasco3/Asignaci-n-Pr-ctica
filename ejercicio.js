@@ -1,19 +1,30 @@
-// Sistema de Promedio de Notas con decimales
 
-// Ingreso de notas
-let nota1 = parseFloat(prompt("Ingrese la primera nota (puede ser decimal):"));
-let nota2 = parseFloat(prompt("Ingrese la segunda nota (puede ser decimal):"));
-let nota3 = parseFloat(prompt("Ingrese la tercera nota (puede ser decimal):"));
+const readline = require("readline");
 
-// Cálculo del promedio
-let promedio = (nota1 + nota2 + nota3) / 3;
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-// Mostrar promedio con 2 decimales
-console.log("El promedio es: " + promedio.toFixed(2));
+rl.question("Ingrese la primera nota: ", function(nota1) {
+  rl.question("Ingrese la segunda nota: ", function(nota2) {
+    rl.question("Ingrese la tercera nota: ", function(nota3) {
 
-// Condicional para aprobar o reprobar
-if (promedio >= 3.0) {
-    console.log("El estudiante APRUEBA");
-} else {
-    console.log("El estudiante REPRUEBA");
-}
+      nota1 = parseFloat(nota1);
+      nota2 = parseFloat(nota2);
+      nota3 = parseFloat(nota3);
+
+      let promedio = (nota1 + nota2 + nota3) / 3;
+
+      console.log("Promedio:", promedio);
+
+      if (promedio >= 3) {
+        console.log("Aprueba");
+      } else {
+        console.log("Reprueba");
+      }
+
+      rl.close();
+    });
+  });
+});
