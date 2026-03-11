@@ -1,0 +1,12 @@
+Calculadora de Promedio de Notas
+
+Descripción:
+Este script en Node.js calcula el promedio de tres notas ingresadas por el usuario y determina si aprueba o reprueba con un promedio mínimo de 3.0.
+
+Requisitos
+- Node.js instalado (se necesita para poder correr el proyecto en la terminal de visual (gitbash)
+
+Uso:
+1. Ejecuta el script: node ejercicio.js (o por el nombre que tanga tu archivo)
+2. Ingresa las tres notas cuando se solicite.
+3. El programa retorna el promedio de las notas ingresadas notas
